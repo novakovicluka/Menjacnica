@@ -1,38 +1,46 @@
 
 public class Valuta {
-String ime;
-String skr;
-double kursProdajni;
-double kursSrednji;
-double kursKupovni;
+private String ime;
+private String skr;
+private double kursProdajni;
+private double kursSrednji;
+private double kursKupovni;
+
 public String getIme() {
+	
 	return ime;
 }
 public void setIme(String ime) {
+	
+	if(ime == null || ime.isEmpty()) throw new RuntimeException("Ime ne sme biti null ili prazan string");
 	this.ime = ime;
 }
 public String getSkr() {
 	return skr;
 }
 public void setSkr(String skr) {
+	if(skr == null || skr.isEmpty()) throw new RuntimeException("Skracenica ne sme biti null ili prazan string");
 	this.skr = skr;
 }
 public double getKursProdajni() {
 	return kursProdajni;
 }
 public void setKursProdajni(double kursProdajni) {
+	if(kursProdajni < 0) throw new RuntimeException("Prodajni kurs ne sme biti manji od nule");
 	this.kursProdajni = kursProdajni;
 }
 public double getKursSrednji() {
 	return kursSrednji;
 }
 public void setKursSrednji(double kursSrednji) {
+	if(kursSrednji < 0) throw new RuntimeException("Srednji kurs ne sme biti manji od nule");
 	this.kursSrednji = kursSrednji;
 }
 public double getKursKupovni() {
 	return kursKupovni;
 }
 public void setKursKupovni(double kursKupovni) {
+	if(kursKupovni < 0) throw new RuntimeException("Kupovni kurs ne sme biti manji od nule");
 	this.kursKupovni = kursKupovni;
 }
 @Override
