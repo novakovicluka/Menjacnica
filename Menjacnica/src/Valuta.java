@@ -5,6 +5,13 @@ String skr;
 double kursProdajni;
 double kursSrednji;
 double kursKupovni;
+String datum;
+public String getDatum() {
+	return datum;
+}
+public void setDatum(String datum) {
+	this.datum = datum;
+}
 public String getIme() {
 	return ime;
 }
