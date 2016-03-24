@@ -46,6 +46,8 @@ public class implementiraInterfejs implements Interfejs {
 			}
 		}	
 
-		}	
+		}
+
+	
 
 }
